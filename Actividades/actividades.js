@@ -6,7 +6,7 @@
 // Cuando decimos “por cada repetición”, estamos señalando la necesidad de emplear ciclos. Si el ciclo está 
 //condicionado por un número de repeticiones, se usa for.
 
-/* MI RESOLUCION
+/* Mi Resolucion
 let mensaje = prompt('Ingrese un mensaje de texto')
 let repeticiones = parseInt(prompt('Ingrese la cantidad de repeticiones: '));
 
@@ -56,6 +56,23 @@ for (let i=1; i <= repeticiones;i++){
 // La “carga consecutiva” implica utilizar un bucle, para solicitar 
 // entradas al usuario una detrás de otra.  Podemos concatenar la entrada obtenida 
 // en cada ciclo a otra variable.
+
+// Mi Resolucion
+// let nomAlumnos
+// let listado = '';
+
+// for (let i = 1; i<11; i++){
+//     nomAlumnos = prompt('Ingrese el nombre del alumno: ');
+//     listado = (listado + '\n ' + nomAlumnos );
+// }  
+// alert('Los alumnos ingresados son: ' + listado)
+
+// Resolucion Coder
+// let alumnos = '';
+// for (let index = 0; index < 10; index++) {
+//     alumnos += prompt("INGRESAR NOMBRE DE ALUMNO")+"\n";
+// }
+// alert(alumnos);
 
 
 
