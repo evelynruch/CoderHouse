@@ -5,14 +5,15 @@
 // Notas actividad 1
 // Cuando decimos “por cada repetición”, estamos señalando la necesidad de emplear ciclos. Si el ciclo está 
 //condicionado por un número de repeticiones, se usa for.
-let repeticiones = 0
-for (let i; i=0;i++){
-    repeticiones = parseInt(prompt('Ingrese la cantidad de repeticiones: '));
-    while (i<=repeticiones)
-    alert('mensaje numero ' +i+ 'enviado correctamente')
-}   
 
+/*
+let mensaje = prompt('Ingrese un mensaje de texto')
+let repeticiones = parseInt(prompt('Ingrese la cantidad de repeticiones: '));
 
+for (let i=1; i <= repeticiones;i++){
+    alert('repeticion numero '+i+ ' del mensaje: '+mensaje)
+} alert ('Ciclo Terminado')
+*/
 
 // Actividad 2 El cuadrado ordinario
 // Solicitar al usuario un (1) número. Emplear este valor para determinar la cantidad de repeticiones, y efectuar una salida por alerta con el mensaje “lado” en cada repetición. Pero si se alcanza un número de iteraciones mayor que cuatro (4), cancelar el ciclo.
@@ -45,6 +46,4 @@ for (let i; i=0;i++){
 // “Pollo” si es 4.
 // Notas actividad 5
 // Es importante distinguir entre el valor de la entrada que asegura la repetición (entrada != “ESC”), y los posibles valores de la entrada que disparan un procesamiento (1,2,3 y 4).
-
-
 
