@@ -29,15 +29,17 @@ for (let i=1; i <= repeticiones;i++){
 // Es importante distinguir entre el número máximo de repeticiones de un for. 
 // y un condicional cuyo cumplimiento puede provocar la interrupción del bucle (con break). 
 
-// Resolucion Sabry y Eve
-// let numero =parseInt(prompt('Ingrese un numero: '));
-// for(let i=1; i <= numero; i++){
-//     if (i >= 5){
-//         break;
-//     } 
-//     alert('lado ' +i);
-// } 
-// alert('Fin del ciclo')
+/*
+Resolucion Sabry y Eve
+let numero =parseInt(prompt('Ingrese un numero: '));
+for(let i=1; i <= numero; i++){
+    if (i >= 5){
+        break;
+    } 
+    alert('lado ' +i);
+} 
+alert('Fin del ciclo')
+*/
 
 //resolucion Coder
 // let lados = prompt('INGRESAR CANTIDAD DE LADOS');
@@ -57,14 +59,16 @@ for (let i=1; i <= repeticiones;i++){
 // entradas al usuario una detrás de otra.  Podemos concatenar la entrada obtenida 
 // en cada ciclo a otra variable.
 
-// Mi Resolucion
-// let nomAlumnos
-// let listado = '';
-// for (let i = 0; i<10; i++){
-//     nomAlumnos = prompt('Ingrese el nombre del alumno: ');
-//     listado = (listado + '\n ' + nomAlumnos );
-// }  
-// alert('Los alumnos ingresados son: ' + listado)
+/*
+Mi Resolucion
+let nomAlumnos
+let listado = '';
+for (let i = 0; i<10; i++){
+    nomAlumnos = prompt('Ingrese el nombre del alumno: ');
+    listado = (listado + '\n ' + nomAlumnos );
+}  
+alert('Los alumnos ingresados son: ' + listado)
+*/
 
 //Resolucion Coder
 // let listado = '';
@@ -80,16 +84,16 @@ for (let i=1; i <= repeticiones;i++){
 // La repetición consecutiva “hasta que se ingrese un valor”, implica el uso de un bucle condicional 
 //(while o do...while), el cual se interrumpe una vez el usuario ingresa dicho valor.
 
-//Mi Resolucion
-// let nombres = ''
-// let lista = ''
-// while (nombres !== 'Voldemort'){
-//     nombres = prompt('Ingresa los nombres de tus compañeros: ');
-//     if (nombres!== 'Voldemort') {
-//         lista = lista + nombres + '\n';
-//     }
-// } 
-// alert('Los nombres ingresados son: \n' + lista);
+/*
+Mi Resolucion
+let nombres = prompt('Ingresa los nombres de tus compañeros: ');
+let lista = ''
+while (nombres !== 'Voldemort'){
+    lista = lista + nombres + '\n';
+    nombres = prompt('Ingresa los nombres de tus compañeros: ');
+}
+alert('Los nombres ingresados son: ' + lista);
+*/
 
 //Resolucion Coder
 // let entrada    = prompt("INGRESAR NOMBRE");
@@ -101,11 +105,63 @@ for (let i=1; i <= repeticiones;i++){
 // alert(ingresados);
 
 // Actividad 5 Comprando productos
-// Solicitar al usuario un (1) número de forma consecutiva, hasta que se ingrese “ESC”. Generar una única salida compuesta por los siguientes productos, según el valor ingresado en cada ciclo:
+// Solicitar al usuario un (1) número de forma consecutiva, hasta que se ingrese “ESC”. 
+// Generar una única salida compuesta por los siguientes productos, según el valor 
+// ingresado en cada ciclo:
 // “Tomate” si es 1.
 // “Papa” si es 2.
 // “Carne” si es 3.
 // “Pollo” si es 4.
 // Notas actividad 5
-// Es importante distinguir entre el valor de la entrada que asegura la repetición (entrada != “ESC”), y los posibles valores de la entrada que disparan un procesamiento (1,2,3 y 4).
+// Es importante distinguir entre el valor de la entrada que asegura la repetición 
+// (entrada != “ESC”), y los posibles valores de la entrada que disparan 
+// un procesamiento (1,2,3 y 4).
+
+/*
+Mi Resolucion
+let entrada = prompt('Ingrese un producto del 1 al 4 o ¨ESC¨: ');
+while (entrada != 'ESC'){
+    switch (entrada){
+        case '1':
+            alert('Tomate'); 
+            break;
+        case '2':
+            alert('Papa');
+            break;
+        case '3':
+            alert('Carne');
+            break;
+        case '4':
+            alert('Pollo');
+            break;
+        default:
+            alert('ERRORRRRR');
+            break;
+    }
+    entrada =prompt('Ingrese nuevamente un numero o ¨ESC¨: ');
+}   
+*/
+
+// Resolucion Coder
+// let entrada =  prompt("SELECCIONAR PRODUCTO DE 1 A 4");
+// while (entrada != 'ESC') {
+//     switch (entrada) {
+//         case "1":
+//             alert("Tomate");
+//             break;
+//         case "2":
+//             alert("Papa");
+//             break;
+//         case "3":
+//             alert("Carne");
+//             break;
+//         case "4":
+//             alert("Pollo");
+//             break;
+//         default:
+//             alert("Error");
+//             break;
+//     }
+//     entrada = prompt("SELECCIONAR PRODUCTO DE 1 A 4");
+// }
 
