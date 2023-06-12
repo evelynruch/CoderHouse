@@ -67,20 +67,19 @@ for (let i=1; i <= repeticiones;i++){
 // }  
 // alert('Los alumnos ingresados son: ' + listado)
 
-// Resolucion Coder
-// let alumnos = '';
+//Resolucion Coder
+// let listado = '';
 // for (let index = 0; index < 10; index++) {
-//     alumnos += prompt("INGRESAR NOMBRE DE ALUMNO")+"\n";
+//     listado += prompt("INGRESAR NOMBRE DE ALUMNO")+"\n";
 // }
-// alert(alumnos);
-
-
+// alert(listado);
 
 // Actividad 4 El innombrable
 // Solicitar al usuario la carga de nombres de forma consecutiva,  hasta que se ingrese “Voldemort”.
 // Luego realizar un única salida por alerta, con todos los nombres ingresados.
 // Notas actividad 4
-// La repetición consecutiva “hasta que se ingrese un valor”, implica el uso de un bucle condicional (while o do...while), el cual se interrumpe una vez el usuario ingresa dicho valor.
+// La repetición consecutiva “hasta que se ingrese un valor”, implica el uso de un bucle condicional 
+//(while o do...while), el cual se interrumpe una vez el usuario ingresa dicho valor.
 
 
 
