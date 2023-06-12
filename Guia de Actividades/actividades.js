@@ -1,7 +1,16 @@
+// CICLOS E ITERACIONES
 // Actividad 1 El pizarrón
-// Solicitar al usuario un (1) un número y un (1) texto. Efectuar una salida por alerta con el mensaje ingresado por cada repetición, hasta alcanzar el valor señalado por el usuario.
+// Solicitar al usuario un (1) un número y un (1) texto. Efectuar una salida por alerta con el mensaje ingresado 
+//por cada repetición, hasta alcanzar el valor señalado por el usuario.
 // Notas actividad 1
-// Cuando decimos “por cada repetición”, estamos señalando la necesidad de emplear ciclos. Si el ciclo está condicionado por un número de repeticiones, se usa for.
+// Cuando decimos “por cada repetición”, estamos señalando la necesidad de emplear ciclos. Si el ciclo está 
+//condicionado por un número de repeticiones, se usa for.
+let repeticiones = 0
+for (let i; i=0;i++){
+    repeticiones = parseInt(prompt('Ingrese la cantidad de repeticiones: '));
+    while (i<=repeticiones)
+    alert('mensaje numero ' +i+ 'enviado correctamente')
+}   
 
 
 
