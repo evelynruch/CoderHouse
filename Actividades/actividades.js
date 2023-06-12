@@ -40,20 +40,22 @@ for (let i=1; i <= repeticiones;i++){
 // alert('Fin del ciclo')
 
 //resolucion Coder
-let lados = prompt('INGRESAR CANTIDAD DE LADOS');
-for (let index = 0; index < lados; index++) {
-    if (index > 3) {
-        break;
-    }
-    alert("lado");
-}
+// let lados = prompt('INGRESAR CANTIDAD DE LADOS');
+// for (let index = 0; index < lados; index++) {
+//     if (index > 3) {
+//         break;
+//     }
+//     alert("lado");
+// }
 
 
 // Actividad 3 Registro de alumnos
 // Solicitar al usuario la carga de diez (10) alumnos de forma consecutiva.
 // Luego realizar un única salida por alerta, con el listado de alumnos registrados.
 // Notas actividad 3
-// La “carga consecutiva” implica utilizar un bucle, para solicitar entradas al usuario una detrás de otra.  Podemos concatenar la entrada obtenida en cada ciclo a otra variable.
+// La “carga consecutiva” implica utilizar un bucle, para solicitar 
+// entradas al usuario una detrás de otra.  Podemos concatenar la entrada obtenida 
+// en cada ciclo a otra variable.
 
 
 
