@@ -39,14 +39,14 @@ for (let i=1; i <= repeticiones;i++){
 // } 
 // alert('Fin del ciclo')
 
-// resolucion Coder
-// let lados = prompt('INGRESAR CANTIDAD DE LADOS');
-// for (let index = 0; index < lados; index++) {
-//     if (index > 3) {
-//         break;
-//     }
-//     alert("lado");
-// }
+//resolucion Coder
+let lados = prompt('INGRESAR CANTIDAD DE LADOS');
+for (let index = 0; index < lados; index++) {
+    if (index > 3) {
+        break;
+    }
+    alert("lado");
+}
 
 
 // Actividad 3 Registro de alumnos
