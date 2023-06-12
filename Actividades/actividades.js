@@ -6,7 +6,7 @@
 // Cuando decimos “por cada repetición”, estamos señalando la necesidad de emplear ciclos. Si el ciclo está 
 //condicionado por un número de repeticiones, se usa for.
 
-/*
+/* MI RESOLUCION
 let mensaje = prompt('Ingrese un mensaje de texto')
 let repeticiones = parseInt(prompt('Ingrese la cantidad de repeticiones: '));
 
@@ -15,11 +15,38 @@ for (let i=1; i <= repeticiones;i++){
 } alert ('Ciclo Terminado')
 */
 
-// Actividad 2 El cuadrado ordinario
-// Solicitar al usuario un (1) número. Emplear este valor para determinar la cantidad de repeticiones, y efectuar una salida por alerta con el mensaje “lado” en cada repetición. Pero si se alcanza un número de iteraciones mayor que cuatro (4), cancelar el ciclo.
-// Notas actividad 2
-// Es importante distinguir entre el número máximo de repeticiones de un for. y un condicional cuyo cumplimiento puede provocar la interrupción del bucle (con break). 
+// Resolucion Coder
+// let cantidad = prompt('INGRESAR CANTIDAD DE REPETICIONES');
+// let texto    = prompt('INGRESAR TEXTO A REPETIR');
+// for (let index = 0; index < cantidad; index++) {
+//     console.log(texto);
 
+// Actividad 2 El cuadrado ordinario
+// Solicitar al usuario un (1) número. Emplear este valor para determinar la cantidad de repeticiones, 
+// y efectuar una salida por alerta con el mensaje “lado” en cada repetición. 
+// Pero si se alcanza un número de iteraciones mayor que cuatro (4), cancelar el ciclo.
+// Notas actividad 2
+// Es importante distinguir entre el número máximo de repeticiones de un for. 
+// y un condicional cuyo cumplimiento puede provocar la interrupción del bucle (con break). 
+
+// Resolucion Sabry y Eve
+// let numero =parseInt(prompt('Ingrese un numero: '));
+// for(let i=1; i <= numero; i++){
+//     if (i >= 5){
+//         break;
+//     } 
+//     alert('lado ' +i);
+// } 
+// alert('Fin del ciclo')
+
+// resolucion Coder
+// let lados = prompt('INGRESAR CANTIDAD DE LADOS');
+// for (let index = 0; index < lados; index++) {
+//     if (index > 3) {
+//         break;
+//     }
+//     alert("lado");
+// }
 
 
 // Actividad 3 Registro de alumnos
