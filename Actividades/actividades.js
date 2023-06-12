@@ -60,8 +60,7 @@ for (let i=1; i <= repeticiones;i++){
 // Mi Resolucion
 // let nomAlumnos
 // let listado = '';
-
-// for (let i = 1; i<11; i++){
+// for (let i = 0; i<10; i++){
 //     nomAlumnos = prompt('Ingrese el nombre del alumno: ');
 //     listado = (listado + '\n ' + nomAlumnos );
 // }  
@@ -81,7 +80,25 @@ for (let i=1; i <= repeticiones;i++){
 // La repetición consecutiva “hasta que se ingrese un valor”, implica el uso de un bucle condicional 
 //(while o do...while), el cual se interrumpe una vez el usuario ingresa dicho valor.
 
+//Mi Resolucion
+// let nombres = ''
+// let lista = ''
+// while (nombres !== 'Voldemort'){
+//     nombres = prompt('Ingresa los nombres de tus compañeros: ');
+//     if (nombres!== 'Voldemort') {
+//         lista = lista + nombres + '\n';
+//     }
+// } 
+// alert('Los nombres ingresados son: \n' + lista);
 
+//Resolucion Coder
+// let entrada    = prompt("INGRESAR NOMBRE");
+// let ingresados = '';
+// while (entrada != 'Voldemort') {
+//     ingresados += entrada +"\n";
+//     entrada     = prompt("INGRESAR NOMBRE");
+// }
+// alert(ingresados);
 
 // Actividad 5 Comprando productos
 // Solicitar al usuario un (1) número de forma consecutiva, hasta que se ingrese “ESC”. Generar una única salida compuesta por los siguientes productos, según el valor ingresado en cada ciclo:
