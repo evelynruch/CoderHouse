@@ -1,0 +1,82 @@
+    
+    // let nombre = 'Ramiro'
+    // let apellido = 'Guzman'
+    // let edad = 26
+    // let inflacion = '105.5'
+    // // COMENTARIO
+    // console.log(apellido)
+   
+
+    // // distintos tipos de datos
+    // // ¨apellido¨ Es un string porque es variable de texto
+    // // la edad es de tipo numero
+    // // 105.5 se escribe con punto los decimales son del mismo tipo los enteros y los decimales, son numeros al fin
+
+    // // concatenar es sumar las variables con el signo mas
+
+    // console.log('Bienvenido ' + nombre + ' ' + apellido)
+
+    // // cuanta edad va a tener ramiro en 10 años
+    // let nuevaEdad = edad + 10
+    // console.log(nuevaEdad)
+    // console.log('La edad de ' + nombre + ' ' + 'es ' + edad)
+
+    // // esta mal porque 105 lo puse entre comillas por lo cual es un string y no se puede sumar 
+    // //console.log(inflacion + 10)
+
+    // prompt y alert
+    // let nombre = prompt('ingrese su nombre')
+    // let apellido = prompt('Ingrese su apellido')
+    // let edad = prompt('Ingrese su edad')
+    // // alert(edad + 10)
+    // // esto esta mal porque estoy concatenando letras y numeros
+    // // convierto la edad que eran letras en numeros para que se sumen
+    // let edadNumero = parseInt(edad)
+    // alert(edadNumero +10)
+
+
+
+// mi solucion
+// let nombre = prompt('Ingresa tu nombre: ')
+// let apellido = prompt('Ingresa tu Apellido: ')
+// let edad = parseInt(prompt('Ingresa tu edad: '))
+// let anio = 2023
+// let edadJubilatoria = 65
+// let aniosHastaJubilarme = edadJubilatoria - edad
+// let anioDejubilacion = 2023 + aniosHastaJubilarme
+
+// alert('Tu nombre es ' + nombre + ', tu apellido es '+ apellido + ' tu edad es ' + edad + ' y te faltan ' + aniosHastaJubilarme + ' años para jubilarte!')
+
+// sabry ejercicio
+// let nombre = prompt('Ingrese su nombre')
+// let edad = prompt('Ingrese su edad')
+// let faltaAnios = 65 - parseInt(edad)
+// alert('Los años que faltan son: '+ faltaAnios) 
+// let anioActual = 2023
+// let anioFinal =  anioActual + faltaAnios 
+// alert('Tu nombre es: '+ nombre + ' te faltan ' + faltaAnios + ' años y será en: ' + anioFinal) 
+ 
+// permita el nombre de un producto y su precio actual
+// suponer que durante el año proximo 100% de inflacion y el precio se ajustara
+// precio futuro
+
+// Mi solucion
+// let producto = prompt('Indique el nombre del producto: ')
+// let precioActual = parseInt(prompt('Indique el precio del producto: '))
+// let tasa = parseInt(prompt('Indique la tasa anual de inflacion: '))
+// precioLuego = precioActual * (1+( tasa / 100))
+// alert(`El producto: ${producto} costará el año próximo, según la tasa de inflación estimada en ${tasa} costará el año próximo ${precioLuego}`)
+
+// Solucion del profe
+// let nombreProducto = prompt("ingrese producto");
+// let precioProducto = prompt("ingrese precio del producto");
+// let inflacionFuturo = parseInt(prompt('Ingrese la inflacion'));
+// let PrecioFuturo = precioProducto * (1 + (inflacionFuturo / 100));
+
+// alert("Al " + " producto" + " " + nombreProducto + " costara" + " " + PrecioFuturo);
+
+// Math.round
+// es para que haga redondeo
+// Date es para date 
+// parseFloat ( numero con comas) 
+// to.fixed(2)
