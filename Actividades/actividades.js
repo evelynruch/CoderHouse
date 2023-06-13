@@ -30,7 +30,7 @@ for (let i=1; i <= repeticiones;i++){
 // y un condicional cuyo cumplimiento puede provocar la interrupción del bucle (con break). 
 
 /*
-Resolucion Sabry y Eve
+Mi Resolucion
 let numero =parseInt(prompt('Ingrese un numero: '));
 for(let i=1; i <= numero; i++){
     if (i >= 5){
