@@ -112,3 +112,63 @@ mostrar2()// 25
 // por ejemplo: let numero = 10
 // entonces numero es una variable global
 // si está definida dentro de una función es local
+
+//Funciones anonimas
+//Generalmente, las funciones anónimas se asignan a variables declaradas como constantes
+const suma  = function (a, b) { return a + b }
+const resta = function (a, b) { return a - b }
+console.log( suma(15,20) )
+console.log( resta(15,5) )
+
+//Funciones Flecha
+const suma  = (a, b) => { return a + b }
+//Si es una función de una sola línea con retorno podemos evitar escribir el cuerpo.
+const resta = (a, b) =>  a - b ;
+console.log( suma(15,20) )
+console.log( resta(20,5) )
+
+// Ejemplo Funcion Flecha
+const suma  = (a,b) => a + b
+const resta = (a,b) => a - b
+//Si una función es una sola línea con retorno y un parámetro puede evitar escribir los ()
+const iva   = x => x * 0.21
+let precioProducto  = 500
+let descuento = 50 
+//Calculo el precioProducto + IVA - descuento
+let nuevoPrecio = resta(suma(precioProducto, iva(precioProducto)), descuento) 
+console.log(nuevoPrecio)
+
+/ Funciones anonimas
+
+ 
+// Ejemplo 7
+const saludoAnonimo = function () {
+    console.log('Hola estudiantes, desde una función anonima!');
+};
+saludoAnonimo();
+
+// Ejemplo 8
+const saludoFlecha = () => {
+    console.log('Hola estudiantes, desde una función flecha!');
+};
+saludoFlecha();
+
+//Ejemplo 9
+const productoFlecha = (numero1, numero2) => {
+    return numero1 * numero2
+}
+let resultadoFlecha = productoFlecha(2, 3);
+console.log(resultadoFlecha);
+
+ 
+//Ejemplo 10
+const productoFlechaSinReturn = (numero1, numero2) => numero1 * numero2
+let resultadoFlechaSinReturn = productoFlechaSinReturn(2, 3);
+console.log(resultadoFlechaSinReturn);
+
+ // Ejemplo 11
+// Omitiendo las llaves y el return
+const calcularIva = (precioBruto) => precioBruto * 0.21; // es como decir 21% de precioBruto
+const calcularIva2 = (precioBruto) => {
+    return precioBruto * 0.21;
+};
