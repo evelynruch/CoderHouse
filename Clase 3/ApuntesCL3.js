@@ -174,8 +174,8 @@ alert('Suma total: ' + suma);
 //     }
 //     entrada = prompt('Ingresar un nombre');
 // }
-// let ingresoExitoso = false;
 
+// let ingresoExitoso = false;
 // while (!ingresoExitoso) {
 //     switch (nombre) {
 //         case usuario1:
