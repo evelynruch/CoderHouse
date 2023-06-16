@@ -1,3 +1,16 @@
+// Gallegos, Evelyn Silvia Graciela
+// evelynruch@gmail.com
+// Curso JavaScript Comision: 43135
+// https://github.com/evelynruch
+
+// Descripcion del Proyecto
+// Estoy desarrollando un portal veterinario en donde el login dependera del tipo de usuario 
+// ya que el ADMIN tendra un ingreso y los clientes otro (este ultimo en desarrollo)
+// el admin o USERVETE tendra funcionalidades distintas a las de los clientes.
+// Por ejemplo el USERVETE podrá asignar un turno veterinario; cargar una lista de productos a comprar
+// Y por otro lado el cliente tendrá otro tipo de funcionalidades, (a futuro, Solicitar turno, comprar productos...)
+
+
 //Usuarios y contraseñas
 class Usuario {
     constructor(nombreUsuario, contrasenia) {
@@ -6,9 +19,11 @@ class Usuario {
     }
 }
 // Crear instancias de Usuario
-let usuarioVete = new Usuario('uservete', '1234');
-let usuario1 = new Usuario('maria', 'maria1979');
-let usuario2 = new Usuario('jose', 'jose1983');
+// Tendremos dos tipos de usuarios, uno de tipo ADMIN y otro de tipo CLIENTE
+// los ingresos validos serán: 'maria' y 'jose' como clientes y 'uservete' como ADMIN
+let usuarioVete = new Usuario('uservete', '1234'); // Usuario y contraseña validos
+let usuario1 = new Usuario('maria', 'maria1979'); // Usuario y contraseña validos
+let usuario2 = new Usuario('jose', 'jose1983'); // Usuario y contraseña validos
 
 // Tendremos usuarios de tipo ADMIN para los veterinarios, para que puedan ingresar a sus funcionalidades
 let tipoDeUsuario = '';
