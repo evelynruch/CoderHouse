@@ -128,7 +128,7 @@ function obtenerFechaTurno() {
 // Verificar Tipo de Usuario
 if (tipoDeUsuario === 'admin') {
     // Funcionalidades del veterinario
-    operacionDeseada = prompt("Ingrese el número deseado:\n1. COMPRAR PRODUCTOS\n2. ASIGNAR TURNO VETERINARIO");
+    operacionDeseada = prompt("Ingrese el número deseado:\n1. COMPRAR PRODUCTOS\n2. ASIGNAR TURNO VETERINARIO\n3. AUTORIZAR NUEVO USER ADMIN");
     switch (operacionDeseada) {
         case '1':
             // Comprar Productos
@@ -192,6 +192,10 @@ if (tipoDeUsuario === 'admin') {
                     alert('El turno ha sido asignado:\nFecha: ' + turno.fecha);
                 } 
             }
+            break;
+        case '3':
+            // Crear un usuario ADMIN con los permisos de ese tipo de usuario
+            
             break;
         default:
             alert('Hasta Pronto');
