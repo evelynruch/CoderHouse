@@ -1,128 +1,129 @@
 // Variables de estado
-let ingresoExitoso = false;
-let esVete = false;
-let arrayTurnos = []; // Declaración de la lista de turnos como una variable global
+// let ingresoExitoso = false;
+// let esVete = false;
 
-// Solicitar nombre de usuario y contraseña al usuario
-let login = prompt('Ingrese su nombre de usuario: ');
-let passLogin = prompt('Ingrese su contraseña: ');
+// // Solicitar nombre de usuario y contraseña al usuario
+// let login = prompt('Ingrese su nombre de usuario: ');
+// let passLogin = prompt('Ingrese su contraseña: ');
 
-// Definición de la clase UsuarioClientes
-class UsuarioClientes {
-  constructor(nombrU, apellidoU, mailDeContactoU, contrasenia) {
-    this.nomUsu = nombrU;
-    this.apeUsu = apellidoU;
-    this.mailUsu = mailDeContactoU;
-    this.contraUsu = contrasenia;
-    this.mascotas = []; // Arreglo para almacenar las mascotas del cliente
-  }
+// // Definición de la clase UsuarioClientes
+// class UsuarioClientes {
+//   constructor(nombrU, apellidoU, mailDeContactoU, contrasenia) {
+//     this.nomUsu = nombrU;
+//     this.apeUsu = apellidoU;
+//     this.mailUsu = mailDeContactoU;
+//     this.contraUsu = contrasenia;
+//     this.mascotas = []; // Arreglo para almacenar las mascotas del cliente
+//     this.turnos = []; // Arreglo para almacenar los turnos del cliente
+//   }
+// }
 
-  establecerContrasenia(contrasenia) {
-    this.contraUsu = contrasenia;
-  }
-
-  validarPassCliente(contraseniaIngresadaCliente) {
-    return this.contraUsu === contraseniaIngresadaCliente;
-  }
-
-  agregarMascota(nombreMascota, tipoMascota, sexoMascota) {
-    const mascota = {
-      nombre: nombreMascota,
-      tipo: tipoMascota,
-      sexo: sexoMascota,
-    };
-    this.mascotas.push(mascota);
-  }
+establecerContrasenia(contrasenia) {
+  this.contraUsu = contrasenia;
 }
+
+validarPassCliente(contraseniaIngresadaCliente) {
+  return this.contraUsu === contraseniaIngresadaCliente;
+}
+
+// agregarMascota(nombreMascota, tipoMascota, sexoMascota) {
+//   const mascota = {
+//     nombre: nombreMascota,
+//     tipo: tipoMascota,
+//     sexo: sexoMascota,
+//   };
+//   this.mascotas.push(mascota);
+// }
+
 
 function buscarClientePorUsuarioYContrasenia(clientes, nombreUsuario, contrasenia) {
   return clientes.find((cliente) => cliente.nomUsu === nombreUsuario && cliente.validarPassCliente(contrasenia));
 }
 
-function cargarMascotas(cliente, cantidadMascotas) {
-  for (let i = 0; i < cantidadMascotas; i++) {
-    let nombreMascota = prompt('Ingrese el nombre de la mascota: ');
-    let tipoMascota = prompt('Ingrese el tipo de mascota: ');
-    let sexoMascota = prompt('Ingrese el sexo de la mascota: ');
+// function cargarMascotas(cliente, cantidadMascotas) {
+//   for (let i = 0; i < cantidadMascotas; i++) {
+//     let nombreMascota = prompt('Ingrese el nombre de la mascota: ');
+//     let tipoMascota = prompt('Ingrese el tipo de mascota: ');
+//     let sexoMascota = prompt('Ingrese el sexo de la mascota: ');
 
-    cliente.agregarMascota(nombreMascota, tipoMascota, sexoMascota);
-    console.log('Mascota cargada correctamente.');
-  }
-}
+//     cliente.agregarMascota(nombreMascota, tipoMascota, sexoMascota);
+//     console.log('Mascota cargada correctamente.');
+//   }
+// }
 
 // Creación de instancias de UsuarioClientes
-let clientesUsers = [
-  new UsuarioClientes('maria', 'lopez', 'maria@mail.com', 'maria1979'),
-  new UsuarioClientes('jose', 'perez', 'jose@mail.com', 'jose1983'),
-  new UsuarioClientes('pedro', 'sanchez', 'pedro@mail.com', 'pedrosan'),
-  new UsuarioClientes('laila', 'gallegos', 'laila@mail.com', 'laila1234'),
-  new UsuarioClientes('milena', 'blondel', 'milena@mail.com', 'mile123'),
-];
+// let clientesUsers = [
+//   new UsuarioClientes('maria', 'lopez', 'maria@mail.com', 'maria1979'),
+//   new UsuarioClientes('jose', 'perez', 'jose@mail.com', 'jose1983'),
+//   new UsuarioClientes('pedro', 'sanchez', 'pedro@mail.com', 'pedrosan'),
+//   new UsuarioClientes('laila', 'gallegos', 'laila@mail.com', 'laila1234'),
+//   new UsuarioClientes('milena', 'blondel', 'milena@mail.com', 'mile123'),
+// ];
 
 
-//Vamos a Cargar algunas mascotas
-// Buscar la instancia de UsuarioClientes correspondiente a "maria"
-let maria = clientesUsers.find((cliente) => cliente.nomUsu === 'maria');
-// Verificar si se encontró la instancia de "maria"
-if (maria) {
-  maria.agregarMascota('Luna', 'Gato', 'Hembra');
-  maria.agregarMascota('Max', 'Perro', 'Macho');
-} else {
-  console.log('No se encontró al cliente "maria" en la lista de clientes.');
-}
+// //Vamos a Cargar algunas mascotas
+// // Buscar la instancia de UsuarioClientes correspondiente a "maria"
+// let maria = clientesUsers.find((cliente) => cliente.nomUsu === 'maria');
+// // Verificar si se encontró la instancia de "maria"
+// if (maria) {
+//   maria.agregarMascota('Luna', 'Gato', 'Hembra');
+//   maria.agregarMascota('Max', 'Perro', 'Macho');
+// } else {
+//   console.log('No se encontró al cliente "maria" en la lista de clientes.');
+// }
 
-// Definición de la clase UsuarioVete
-class UsuarioVete {
-  constructor(nombre, mail, contrasenia) {
-    this.nomVete = nombre;
-    this.mailVete = mail;
-    this.contraVete = contrasenia;
-    this.tipoUsu = 'veterinario';
-  }
+// // Definición de la clase UsuarioVete
+// class UsuarioVete {
+//   constructor(nombre, mail, contrasenia) {
+//     this.nomVete = nombre;
+//     this.mailVete = mail;
+//     this.contraVete = contrasenia;
+//     this.tipoUsu = 'veterinario';
+//   }
 
   validarPassVete(contraseniaIngresada) {
     return this.contraVete === contraseniaIngresada;
   }
 }
 
-// Creación de instancias de UsuarioVete
-let veteUsers = [
-  new UsuarioVete('uservete', 'patitas@mail.com', '1234'),
-  new UsuarioVete('uservete2', 'uservete2@mail.com', '1234'),
-  new UsuarioVete('uservete3', 'uservete3@mail.com', '1234'),
-  new UsuarioVete('uservete4', 'uservete4@mail.com', '1234'),
-];
+// // Creación de instancias de UsuarioVete
+// let veteUsers = [
+//   new UsuarioVete('uservete', 'patitas@mail.com', '1234'),
+//   new UsuarioVete('uservete2', 'uservete2@mail.com', '1234'),
+//   new UsuarioVete('uservete3', 'uservete3@mail.com', '1234'),
+//   new UsuarioVete('uservete4', 'uservete4@mail.com', '1234'),
+// ];
 
 let nuevosVeteUsers = [];
 
 // Función para buscar un usuario en la lista de usuarios
-// function buscarUsuario(listaUsuarios, nombreUsuario, contrasenia) {
-//   for (let i = 0; i < listaUsuarios.length; i++) {
-//     let usuario = listaUsuarios[i];
-//     if (usuario.tipoUsu === 'veterinario') {
-//       if (
-//         usuario.nomVete === nombreUsuario &&
-//         usuario.validarPassVete(contrasenia)
-//       ) {
-//         return usuario;
-//       }
-//     } else {
-//       if (
-//         usuario.nomUsu === nombreUsuario &&
-//         usuario.validarPassCliente(contrasenia)
-//       ) {
-//         return usuario;
-//       }
-//     }
-//   }
-//   return null;
-// }
-
 function buscarUsuario(listaUsuarios, nombreUsuario, contrasenia) {
-  return listaUsuarios.find(
-    (usuario) => usuario.nomVete === nombreUsuario && usuario.validarPassVete(contrasenia)
-  );
+  for (let i = 0; i < listaUsuarios.length; i++) {
+    let usuario = listaUsuarios[i];
+    if (usuario.tipoUsu === 'veterinario') {
+      if (
+        usuario.nomVete === nombreUsuario &&
+        usuario.validarPassVete(contrasenia)
+      ) {
+        return usuario;
+      }
+    } else {
+      if (
+        usuario.nomUsu === nombreUsuario &&
+        usuario.validarPassCliente(contrasenia)
+      ) {
+        return usuario;
+      }
+    }
+  }
+  return null;
 }
+
+// function buscarUsuario(listaUsuarios, nombreUsuario, contrasenia) {
+//   return listaUsuarios.find(
+//     (usuario) => usuario.nomVete === nombreUsuario && usuario.validarPassVete(contrasenia)
+//   );
+// }
 
 // Buscar al usuario ingresado en la lista de usuarios
 let clienteEncontrado = buscarUsuario(clientesUsers, login, passLogin);
@@ -170,32 +171,32 @@ function agregarTurnoCLienteEncontrado(clienteEncontrado) {
   agregarTurno(clienteEncontrado);
 }
 
-function obtenerProximoDiaHabil() {
-  // Lógica para obtener el próximo día hábil (puede variar según tus necesidades)
-  let fechaActual = new Date();
-  let diaSemana = fechaActual.getDay();
-  let diasAgregados = 0;
+// function obtenerProximoDiaHabil() {
+//   // Lógica para obtener el próximo día hábil (puede variar según tus necesidades)
+//   let fechaActual = new Date();
+//   let diaSemana = fechaActual.getDay();
+//   let diasAgregados = 0;
 
-  // 0 = Domingo, 6 = Sábado
-  if (diaSemana === 5) {
-    // Si es viernes, se agrega 3 días para llegar al próximo martes (día hábil)
-    diasAgregados = 3;
-  } else if (diaSemana === 6) {
-    // Si es sábado, se agrega 2 días para llegar al próximo martes (día hábil)
-    diasAgregados = 2;
-  } else {
-    // Para los demás días, se agrega 1 día para llegar al próximo día hábil (martes)
-    diasAgregados = 1;
-  }
+//   // 0 = Domingo, 6 = Sábado
+//   if (diaSemana === 5) {
+//     // Si es viernes, se agrega 3 días para llegar al próximo martes (día hábil)
+//     diasAgregados = 3;
+//   } else if (diaSemana === 6) {
+//     // Si es sábado, se agrega 2 días para llegar al próximo martes (día hábil)
+//     diasAgregados = 2;
+//   } else {
+//     // Para los demás días, se agrega 1 día para llegar al próximo día hábil (martes)
+//     diasAgregados = 1;
+//   }
 
-  fechaActual.setDate(fechaActual.getDate() + diasAgregados);
+//   fechaActual.setDate(fechaActual.getDate() + diasAgregados);
 
-  let dia = fechaActual.getDate();
-  let mes = fechaActual.getMonth() + 1; // Sumar 1 porque los meses van de 0 a 11
-  let anio = fechaActual.getFullYear();
+//   let dia = fechaActual.getDate();
+//   let mes = fechaActual.getMonth() + 1; // Sumar 1 porque los meses van de 0 a 11
+//   let anio = fechaActual.getFullYear();
 
-  return `${dia}/${mes}/${anio}`;
-}
+//   return `${dia}/${mes}/${anio}`;
+// }
 
 function iniciarSesion() {
   // Buscar el usuario en la lista de clientes
@@ -222,20 +223,20 @@ function iniciarSesion() {
 }
 
 // Función para cargar turnos a un veterinario
-function cargarTurnos(veterinario, cantidadTurnos) {
-  for (let i = 0; i < cantidadTurnos; i++) {
-    let fechaTurno = prompt('Ingrese la fecha del turno (dd/mm/aaaa): ');
-    let horaTurno = prompt('Ingrese la hora del turno (hh:mm): ');
+// function cargarTurnos(veterinario, cantidadTurnos) {
+//   for (let i = 0; i < cantidadTurnos; i++) {
+//     let fechaTurno = prompt('Ingrese la fecha del turno (dd/mm/aaaa): ');
+//     let horaTurno = prompt('Ingrese la hora del turno (hh:mm): ');
 
-    let turno = {
-      fecha: fechaTurno,
-      hora: horaTurno,
-      veterinario: veterinario.nomVete,
-    };
-    arrayTurnos.push(turno);
-    console.log('Turno cargado correctamente.');
-  }
-}
+//     let turno = {
+//       fecha: fechaTurno,
+//       hora: horaTurno,
+//       veterinario: veterinario.nomVete,
+//     };
+//     arrayTurnos.push(turno);
+//     console.log('Turno cargado correctamente.');
+//   }
+// }
 
 // Si el cliente es encontrado
 if (clienteEncontrado !== null) {
