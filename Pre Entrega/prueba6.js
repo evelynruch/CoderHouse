@@ -2,7 +2,7 @@
 let listaClientes = []; // Arreglo para almacenar la lista de clientes
 let listaVetes = []; // Arreglo para almacenar la lista de Veterinarios
 
-login();
+
 function login() {
   let tipoUsuario = prompt('Ingrese el tipo de usuario (Cliente/Veterinario):');
   tipoUsuario = tipoUsuario.toLowerCase();
@@ -53,6 +53,14 @@ function mostrarMenuCliente() {
   switch (opcion) {
     case 1:
       // Lógica para solicitar turno veterinario
+      // quiero que busque en la lista de clientes los datos del cliente logueado 
+      // que pregunte mediante alert el nombre de la mascota para la cual sera el turno
+      // que revise en los datos del cliente si la mascota ya se encuentra en la lista
+      // si la mascota no se encuentra en la lista, ofrezca al usuario mediante alert cargar los datos de la mascota
+      // ya obtuvo el nombre de la mascota, faltaria consultar el tipo de mascota y el sexo.
+      // despues de cargar los datos de la mascota, que pregunte el horario en el que desea el turno
+      // y luego que utilice la funcion obtenerProximoDiaHabil para responder mediante un alert con todos los datos
+      // del turno recientemente creado.
       alert('Solicitando turno veterinario...');
       break;
     case 2:
@@ -120,15 +128,6 @@ class UsuarioClientes {
     this.turnos.push(turno);
   }
 }
-class UsuarioVetes {
-  constructor(nombreVete, apellidoVete, mailVete, contraseniaVete) {
-    this.nomVet = nombreVete;
-    this.apeVet = apellidoVete;
-    this.mailVet = mailVete;
-    this.contraVet = contraseniaVete; 
-  }
-}
-
 // Creación de instancias de UsuarioClientes
 let cliente = new UsuarioClientes('maria', 'lopez', 'maria@mail.com', 'maria123');
 let cliente2 = new UsuarioClientes('jose', 'perez', 'jose@mail.com', 'jose123');
@@ -148,6 +147,15 @@ cliente2.agregarMascota('Saky', 'Perro', 'Hembra');
 cliente3.agregarMascota('Samba', 'Perro', 'Hembra');
 cliente4.agregarMascota('Corcho', 'Perro', 'Macho');
 cliente5.agregarMascota('Merlin', 'Gato', 'Macho');
+
+class UsuarioVetes {
+  constructor(nombreVete, apellidoVete, mailVete, contraseniaVete) {
+    this.nomVet = nombreVete;
+    this.apeVet = apellidoVete;
+    this.mailVet = mailVete;
+    this.contraVet = contraseniaVete; 
+  }
+}
 
 // Creación de instancias de UsuarioVetes
 let vete = new UsuarioVetes('daniel', 'gallegos', 'daniel@mail.com', 'daniel123');
@@ -231,7 +239,7 @@ function cargarTurnosVeterinarios(listaClientes) {
   }
 }
 // Ejemplo de uso: Cargar turnos veterinarios
-cargarTurnosVeterinarios(listaClientes);
+// cargarTurnosVeterinarios(listaClientes);
 
 // Función para cargar varias mascotas a un cliente específico
 function cargarMascotas(listaClientes) {
@@ -255,4 +263,6 @@ function cargarMascotas(listaClientes) {
   }
 }
 // Ejemplo de uso: Cargar mascotas para un cliente específico
-cargarMascotas(listaClientes);
+// cargarMascotas(listaClientes);
+
+login()
