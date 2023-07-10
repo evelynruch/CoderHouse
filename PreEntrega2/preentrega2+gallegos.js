@@ -1,3 +1,16 @@
+// Gallegos, Evelyn Silvia Graciela
+// evelynruch@gmail.com
+// Curso JavaScript Comision: 43135
+// https://github.com/evelynruch
+
+// Descripcion del Proyecto
+// Estoy desarrollando un portal veterinario en donde el login dependera del tipo de usuario 
+// ya que el ADMIN tendra un ingreso y los clientes otro (este ultimo en desarrollo)
+// el admin o USERVETE tendra funcionalidades distintas a las de los clientes.
+// Por ejemplo el USERVETE podrá asignar un turno veterinario; cargar una lista de productos a comprar
+// Y por otro lado el cliente tendrá otro tipo de funcionalidades, (a futuro, Solicitar turno, comprar productos...)
+
+
 // El código proporcionado es un sistema simplificado de gestión de usuarios y turnos para un portal de usuarios. 
 // A continuación, se proporciona una explicación comentada del código:
 // Portal de Usuarios
