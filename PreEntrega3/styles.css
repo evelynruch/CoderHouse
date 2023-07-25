@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #007bff;
+}
+
+form {
+  border: 1px solid #ccc;
+  padding: 30px; /* Aumentar el espaciado */
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px; /* Aumentar el espaciado */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* Aumentar el espaciado */
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px; /* Aumentar el padding para hacer los botones más grandes */
+  border: none;
+  border-radius: 5px; /* Hacer los bordes un poco más redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agregar una transición suave al color de fondo */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cambiar el color de fondo al pasar el mouse por encima */
+}

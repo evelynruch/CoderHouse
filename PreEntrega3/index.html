@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Inicio de Sesión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Inicio de Sesión</h1>
+  <form id="loginForm">
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="usertype">Tipo de usuario:</label>
+    <select id="usertype" name="usertype" required>
+      <option value="cliente">Cliente</option>
+      <option value="veterinario">Veterinario</option>
+    </select>
+    <button type="button" onclick="mostrarSubMenu()">Iniciar sesión</button>
+    <!-- Contenedor para el mensaje de error -->
+    <div id="errorMessage" style="display: none; color: red;">
+      Credenciales incorrectas. Inténtalo de nuevo.
+    </div>
+  </form>
+
+<!-- Contenedor para el menú de cliente -->
+<div id="clientMenu" style="display: none;">
+  <h2>Bienvenido, cliente!</h2>
+  <h3>Te damos la bienvenida 🐾</h3>
+  <label for="selectClientMenu">Selecciona una opción:</label>
+  <select id="selectClientMenu" onchange="mostrarSubMenu()">
+    <option value="turno">Cargar Turno Veterinario</option>
+    <option value="mascota">Cargar Nueva Mascota</option>
+    <option value="productos">Comprar Productos</option>
+    <option value="mis_turnos">Mis Turnos</option>
+    <option value="logout">Cerrar Sesión</option>
+  </select>
+  <br>
+  <button type="button" onclick="mostrarSubMenu()">Enviar</button>
+</div>
+
+
+  <!-- Contenedor para el menú de veterinario -->
+  <div id="vetMenu" style="display: none;">
+    <h2>Bienvenido, veterinario!</h2>
+    <h3>Te damos la bienvenida 🐾</h3>
+    <!-- Agregar opciones específicas del menú de veterinario aquí -->
+    <button type="button" onclick="mostrarMenuInicioSesion()">Cerrar Sesión</button>
+  </div>
+
+  <!-- Contenedor para el menú de cargar turno veterinario -->
+  <div id="menuCargarTurno" style="display: none;">
+    <h2>Cargar Turno Veterinario</h2>
+    <form id="turnoForm" onsubmit="cargarTurnoVeterinario(); return false;">
+      <label for="nombreMascota">Nombre de la mascota:</label>
+      <input type="text" id="nombreMascota" required><br>
+  
+      <label for="horarioTurno">Horario del turno (entre las 10 y las 18hs):</label>
+      <input type="time" id="horarioTurno" required><br>
+  
+      <button type="submit" onsubmit="cargarTurnoVeterinario()">Solicitar Turno</button>
+    </form>
+  </div>
+  
+
+  <!-- Contenedor para el menú de cargar nueva mascota -->
+  <div id="menuCargarMascota" style="display: none;">
+    <!-- Contenido del menú de cargar nueva mascota -->
+    <h2>Menú Cargar Nueva Mascota</h2>
+    <!-- Agregamos el botón de "Atrás" para redirigir al menú principal del cliente -->
+    <button onclick="mostrarClienteMenu()">Atrás</button>
+  </div>
+
+  <!-- Contenedor para el menú de comprar productos -->
+  <div id="menuComprarProductos" style="display: none;">
+    <!-- Contenido del menú de comprar productos -->
+    <h2>Menú Comprar Productos</h2>
+    <!-- Agregamos el botón de "Atrás" para redirigir al menú principal del cliente -->
+    <button onclick="mostrarClienteMenu()">Atrás</button>
+  </div>
+
+  <!-- Contenedor para el menú de mis turnos -->
+  <div id="menuMisTurnos" style="display: none;">
+    <!-- Contenido del menú de mis turnos -->
+    <h2>Menú Mis Turnos</h2>
+    <!-- Agregamos el botón de "Atrás" para redirigir al menú principal del cliente -->
+    <button onclick="mostrarClienteMenu()">Atrás</button>
+  </div>
+
+  <!-- Contenedor para el menú de logout -->
+  <div id="menuLogout" style="display: none;">
+    <!-- Contenido del menú de logout -->
+    <h2>Menú Log Out</h2>
+    <!-- Agregamos el botón de "Atrás" para redirigir al menú principal del cliente -->
+    <button onclick="mostrarClienteMenu()">Atrás</button>
+  </div>
+
+  <script src="preentrega6.js" type="text/javascript"></script>
+</body>
+
+</html>
